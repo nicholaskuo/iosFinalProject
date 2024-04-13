@@ -14,6 +14,8 @@
 		51A17B8D2BCB00F800899683 /* ClothesScannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A17B8C2BCB00F800899683 /* ClothesScannerTests.swift */; };
 		51A17B972BCB00F800899683 /* ClothesScannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A17B962BCB00F800899683 /* ClothesScannerUITests.swift */; };
 		51A17B992BCB00F800899683 /* ClothesScannerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A17B982BCB00F800899683 /* ClothesScannerUITestsLaunchTests.swift */; };
+		51A17BA92BCB038B00899683 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A17BA52BCB014600899683 /* CameraView.swift */; };
+		51A17BAA2BCB038D00899683 /* SegmentImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51A17BA72BCB01E900899683 /* SegmentImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		51A17B922BCB00F800899683 /* ClothesScannerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClothesScannerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A17B962BCB00F800899683 /* ClothesScannerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesScannerUITests.swift; sourceTree = "<group>"; };
 		51A17B982BCB00F800899683 /* ClothesScannerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesScannerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		51A17BA52BCB014600899683 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		51A17BA72BCB01E900899683 /* SegmentImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentImage.swift; sourceTree = "<group>"; };
+		51A17BAB2BCB044300899683 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +99,11 @@
 		51A17B7A2BCB00F600899683 /* ClothesScanner */ = {
 			isa = PBXGroup;
 			children = (
+				51A17BAB2BCB044300899683 /* Info.plist */,
+				51A17BA52BCB014600899683 /* CameraView.swift */,
 				51A17B7B2BCB00F600899683 /* ClothesScannerApp.swift */,
 				51A17B7D2BCB00F600899683 /* ContentView.swift */,
+				51A17BA72BCB01E900899683 /* SegmentImage.swift */,
 				51A17B7F2BCB00F800899683 /* Assets.xcassets */,
 				51A17B812BCB00F800899683 /* Preview Content */,
 			);
@@ -257,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51A17BA92BCB038B00899683 /* CameraView.swift in Sources */,
 				51A17B7E2BCB00F600899683 /* ContentView.swift in Sources */,
 				51A17B7C2BCB00F600899683 /* ClothesScannerApp.swift in Sources */,
+				51A17BAA2BCB038D00899683 /* SegmentImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -425,11 +435,15 @@
 				DEVELOPMENT_TEAM = CW58XP23R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClothesScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To scan clothes into the application";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows app to save photos to photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -454,11 +468,15 @@
 				DEVELOPMENT_TEAM = CW58XP23R5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ClothesScanner/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "To scan clothes into the application";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Allows app to save photos to photo library";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,8 +12,10 @@ import Vision
 struct ContentView: View {
     @State private var image: UIImage?
     @State private var showCamera = false
+    @State private var isActive = false 
     
     var body: some View {
+        NavigationStack {
             VStack {
                 if let image = image {
                     Image(uiImage: image)
@@ -28,18 +30,18 @@ struct ContentView: View {
                         )
                 } else {
                     Text("Scanned clothes appears here")
-                                .frame(width: 350, height: 400)
-                                .foregroundColor(.black)
-                                .multilineTextAlignment(.center)
-                                .lineLimit(nil)
-                                .padding()
-                                .background(Color.white)
-                                .overlay(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .stroke(style: StrokeStyle(lineWidth: 2, dash: [10]))
-                                        .foregroundColor(.gray)
-                                )
-                                .cornerRadius(20)
+                        .frame(width: 350, height: 400)
+                        .foregroundColor(.black)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(nil)
+                        .padding()
+                        .background(Color.white)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 20)
+                                .stroke(style: StrokeStyle(lineWidth: 2, dash: [10]))
+                                .foregroundColor(.gray)
+                        )
+                        .cornerRadius(20)
                 }
                 
                 Button(action: {
@@ -54,21 +56,28 @@ struct ContentView: View {
                 .padding()
                 
                 if let image = image {
-                    Button(action: {
-                        // TODO: Add Navigation to view where user fills in metadata and saves image (maybe pass the image as a binding into this view)
-                    }) {
-                        Text("Save Clothing")
-                            .padding()
-                            .foregroundColor(.white)
-                            .background(Color(hue: 0.394, saturation: 0.65, brightness: 0.913))
-                            .cornerRadius(8)
+                    VStack{
+                        NavigationLink(destination: ClothingMetadataView(uiImage: image).navigationBarHidden(true), isActive: $isActive) { EmptyView() }
+                        
+                        Button(action: {
+                            // TODO: Add Navigation to view where user fills in metadata and saves image (maybe pass the image as a binding into this view)
+                            print("NICK KUO")
+                            isActive = true
+                        }) {
+                            Text("Save Clothing")
+                                .padding()
+                                .foregroundColor(.white)
+                                .background(Color(hue: 0.394, saturation: 0.65, brightness: 0.913))
+                                .cornerRadius(8)
+                        }
+                        .padding()
                     }
-                    .padding()
                 }
             }
             .sheet(isPresented: $showCamera) {
                 CameraView(image: $image)
             }
+        }
     }
 }
 

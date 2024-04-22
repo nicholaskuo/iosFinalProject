@@ -44,42 +44,6 @@ class StorageViewModel: ObservableObject {
     
     func deleteClothingItem() {}
     
-//    func deleteWeatherItem(location: String, timestamp: Date) {
-//        let fetchRequest: NSFetchRequest<WeatherItem> = WeatherItem.fetchRequest()
-//        
-//        // Use both location and timestamp as criteria to find a specific WeatherItem
-//        let locationPredicate = NSPredicate(format: "location == %@", location)
-//        let timestampPredicate = NSPredicate(format: "timestamp == %@", timestamp as NSDate)
-//        let compoundPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [locationPredicate, timestampPredicate])
-//        fetchRequest.predicate = compoundPredicate
-//        
-//        do {
-//            let itemsToDelete = try persistentContainer.viewContext.fetch(fetchRequest)
-//            for item in itemsToDelete {
-//                persistentContainer.viewContext.delete(item)
-//            }
-//            save()
-//        } catch {
-//            print("Couldn't delete: \(error)")
-//        }
-//    }
-//    
-
-//    
-//    func isLocationFavorited(locName: String) -> Bool {
-//        let fetchRequest: NSFetchRequest<LocationItem> = LocationItem.fetchRequest()
-//        let locations = try? persistentContainer.viewContext.fetch(fetchRequest)
-//        if locations == nil {
-//            return false
-//        }
-//        for location in locations! {
-//            if locName == location.location {
-//                return true
-//            }
-//        }
-//        return false
-//    }
-//  
     func save() {
         guard persistentContainer.viewContext.hasChanges else { return }
         

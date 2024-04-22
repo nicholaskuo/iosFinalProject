@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct ClothingItem {
+//    UUID, tag (top, bottom, shoe, etc.), number of wears, previous wears, and scheduled wears
+    var id: UUID = UUID()
+    var tag: String
+    var numWears: Int = 0
+    
+}

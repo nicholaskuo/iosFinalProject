@@ -9,7 +9,24 @@ import SwiftUI
 
 struct ClothingItemView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+            Image("tshirt.png")
+                .resizable()
+                .frame(width: 200, height: 200)
+            Spacer().frame(height: 30)
+            VStack {
+                // kind of arbitrary for now
+                Text("Tags: blue, shirt")
+                Text("Number of wears: 4")
+                Text("other metadata")
+            }
+            .padding(15)
+            .overlay(
+                RoundedRectangle(cornerRadius: 10)
+                    .stroke(.black, lineWidth: 1)
+            )
+        }
     }
 }
 

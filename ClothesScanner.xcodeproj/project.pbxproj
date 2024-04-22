@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19C190472BD6E57A000EB44A /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C190462BD6E57A000EB44A /* HeaderView.swift */; };
 		1D008D522BD210FC005A89D3 /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D008D512BD210FC005A89D3 /* ClothingItem.swift */; };
 		1D008D542BD21108005A89D3 /* ClosetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D008D532BD21108005A89D3 /* ClosetViewModel.swift */; };
 		1D008D562BD21111005A89D3 /* ClothingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D008D552BD21111005A89D3 /* ClothingItemView.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19C190462BD6E57A000EB44A /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1D008D512BD210FC005A89D3 /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
 		1D008D532BD21108005A89D3 /* ClosetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetViewModel.swift; sourceTree = "<group>"; };
 		1D008D552BD21111005A89D3 /* ClothingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItemView.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				51A17BA52BCB014600899683 /* CameraView.swift */,
 				1D008D552BD21111005A89D3 /* ClothingItemView.swift */,
 				1D008D572BD21119005A89D3 /* ClosetView.swift */,
+				19C190462BD6E57A000EB44A /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D008D582BD21119005A89D3 /* ClosetView.swift in Sources */,
+				19C190472BD6E57A000EB44A /* HeaderView.swift in Sources */,
 				1D008D522BD210FC005A89D3 /* ClothingItem.swift in Sources */,
 				1D008D562BD21111005A89D3 /* ClothingItemView.swift in Sources */,
 				51A17BA92BCB038B00899683 /* CameraView.swift in Sources */,

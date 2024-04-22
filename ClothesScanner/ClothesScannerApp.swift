@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct ClothesScannerApp: App {
+    let persistenceController = StorageViewModel.shared
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            ClosetView()
+                .environment(\.managedObjectContext,
+                persistenceController.persistentContainer.viewContext)
         }
     }
 }

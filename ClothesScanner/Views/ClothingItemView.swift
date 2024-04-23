@@ -9,10 +9,12 @@ import SwiftUI
 
 struct ClothingItemView: View {
     @State var item: ClothingItem?
+    @State var onClose: (ClothingItem) -> Void // Closure to inform when the view is dismissed
+    
     var body: some View {
-        VStack {
-            if let item = item {
-                Image(uiImage: UIImage(data: item.image!)!)
+        VStack {//test these new changes
+            if let item = item, let image = item.image {
+                Image(uiImage: UIImage(data: image)!)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .frame(width: 200, height: 200)
@@ -27,11 +29,28 @@ struct ClothingItemView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(.black, lineWidth: 1)
                 )
+                Button(action: {
+                    StorageViewModel.shared.deleteClothingItem(item : item)
+                }) {
+                    Label(
+                            title: { Text("Delete from closet") },
+                            icon: {
+                                Image(systemName: "tshirt.fill")
+                                    .foregroundColor(.purple)
+                            }
+                        )
+                }
             } else {
                 ProgressView("Loading...")
                     .progressViewStyle(CircularProgressViewStyle())
             }
         }
+        .onDisappear {
+                        // Inform the parent view (ClosetView) when the view is dismissed
+                        if let item = item {
+                            onClose(item)
+                        }
+                    }
     }
 }
 

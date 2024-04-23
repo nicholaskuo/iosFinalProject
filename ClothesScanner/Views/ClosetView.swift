@@ -34,8 +34,14 @@ struct ClosetView: View {
                                         }) {
                                             Image(uiImage: uiImage)
                                                 .resizable()
-                                                .aspectRatio(contentMode: .fit)
+                                                .scaledToFit()
                                                 .frame(width: 200, height: 200)
+                                                .cornerRadius(20)
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 20)
+                                                        .stroke(style: StrokeStyle(lineWidth: 2, dash: [10]))
+                                                        .foregroundColor(.purple)
+                                                )
                                             }
                                         } else {
                                             Text("No image found")
@@ -49,7 +55,13 @@ struct ClosetView: View {
                 }
             }
             .sheet(item: $selectedItem) { item in
-                ClothingItemView(item: item)
+                ClothingItemView(item: item, onClose: { deletedItem in
+                    // Check if the deleted item is the same as the currently selected item
+                    if deletedItem == selectedItem {
+                        // Reset the selected item
+                        selectedItem = nil
+                    }
+                })
             }
         }
     }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		198FEE7A2BD7366A008A7B8D /* StorageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE792BD7366A008A7B8D /* StorageViewModel.swift */; };
+		198FEE7D2BD736AA008A7B8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE7B2BD736AA008A7B8D /* Model.xcdatamodeld */; };
+		198FEE7F2BD73D02008A7B8D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198FEE7E2BD73D02008A7B8D /* HeaderView.swift */; };
 		1D008D522BD210FC005A89D3 /* ClothingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D008D512BD210FC005A89D3 /* ClothingItem.swift */; };
 		1D008D542BD21108005A89D3 /* ClosetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D008D532BD21108005A89D3 /* ClosetViewModel.swift */; };
 		1D008D562BD21111005A89D3 /* ClothingItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D008D552BD21111005A89D3 /* ClothingItemView.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		198FEE792BD7366A008A7B8D /* StorageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageViewModel.swift; sourceTree = "<group>"; };
+		198FEE7C2BD736AA008A7B8D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		198FEE7E2BD73D02008A7B8D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		1D008D512BD210FC005A89D3 /* ClothingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItem.swift; sourceTree = "<group>"; };
 		1D008D532BD21108005A89D3 /* ClosetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClosetViewModel.swift; sourceTree = "<group>"; };
 		1D008D552BD21111005A89D3 /* ClothingItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothingItemView.swift; sourceTree = "<group>"; };
@@ -109,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				1D008D512BD210FC005A89D3 /* ClothingItem.swift */,
+				198FEE7B2BD736AA008A7B8D /* Model.xcdatamodeld */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 				51A17B7D2BCB00F600899683 /* ContentView.swift */,
 				51A17BA52BCB014600899683 /* CameraView.swift */,
 				514120922BD6C8640017C8DF /* ClothingMetadataView.swift */,
+				198FEE7E2BD73D02008A7B8D /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				51A17BB12BD612C600899683 /* CameraViewModel.swift */,
+				198FEE792BD7366A008A7B8D /* StorageViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -335,12 +344,15 @@
 				1D008D522BD210FC005A89D3 /* ClothingItem.swift in Sources */,
 				1D008D562BD21111005A89D3 /* ClothingItemView.swift in Sources */,
 				514120932BD6C8640017C8DF /* ClothingMetadataView.swift in Sources */,
+				198FEE7A2BD7366A008A7B8D /* StorageViewModel.swift in Sources */,
 				51A17BA92BCB038B00899683 /* CameraView.swift in Sources */,
 				51A17BAF2BD5D37500899683 /* ImageVisionHelper.swift in Sources */,
 				51A17B7E2BCB00F600899683 /* ContentView.swift in Sources */,
 				51A17BB22BD612C600899683 /* CameraViewModel.swift in Sources */,
 				51A17B7C2BCB00F600899683 /* ClothesScannerApp.swift in Sources */,
 				1D008D542BD21108005A89D3 /* ClosetViewModel.swift in Sources */,
+				198FEE7D2BD736AA008A7B8D /* Model.xcdatamodeld in Sources */,
+				198FEE7F2BD73D02008A7B8D /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClothesScanner/Preview Content\"";
-				DEVELOPMENT_TEAM = CW58XP23R5;
+				DEVELOPMENT_TEAM = 3RX855KM35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClothesScanner/Info.plist;
@@ -521,7 +533,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nicholaskuo.ClothesScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = nicholaskuo.ClothesScanner1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -537,7 +549,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ClothesScanner/Preview Content\"";
-				DEVELOPMENT_TEAM = CW58XP23R5;
+				DEVELOPMENT_TEAM = 3RX855KM35;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ClothesScanner/Info.plist;
@@ -554,7 +566,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nicholaskuo.ClothesScanner;
+				PRODUCT_BUNDLE_IDENTIFIER = nicholaskuo.ClothesScanner1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -678,6 +690,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		198FEE7B2BD736AA008A7B8D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				198FEE7C2BD736AA008A7B8D /* Model.xcdatamodel */,
+			);
+			currentVersion = 198FEE7C2BD736AA008A7B8D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 51A17B702BCB00F600899683 /* Project object */;
 }

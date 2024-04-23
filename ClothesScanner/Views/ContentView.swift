@@ -17,6 +17,8 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                HeaderView()
+                Spacer()
                 if let image = image {
                     Image(uiImage: image)
                         .resizable()

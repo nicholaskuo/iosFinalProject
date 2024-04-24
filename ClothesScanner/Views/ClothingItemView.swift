@@ -12,7 +12,7 @@ struct ClothingItemView: View {
     @State var onClose: (ClothingItem) -> Void // Closure to inform when the view is dismissed
     
     var body: some View {
-        VStack {//test these new changes
+        VStack(spacing: 25) {//test these new changes
             if let item = item, let image = item.image {
                 Image(uiImage: UIImage(data: image)!)
                     .resizable()
@@ -29,6 +29,8 @@ struct ClothingItemView: View {
                     RoundedRectangle(cornerRadius: 10)
                         .stroke(.black, lineWidth: 1)
                 )
+                Spacer()
+                    .frame(height: 50)
                 Button(action: {
                     StorageViewModel.shared.deleteClothingItem(item : item)
                 }) {
@@ -36,7 +38,7 @@ struct ClothingItemView: View {
                             title: { Text("Delete from closet") },
                             icon: {
                                 Image(systemName: "tshirt.fill")
-                                    .foregroundColor(.purple)
+                                    .foregroundColor(.red)
                             }
                         )
                 }
@@ -46,7 +48,6 @@ struct ClothingItemView: View {
             }
         }
         .onDisappear {
-                        // Inform the parent view (ClosetView) when the view is dismissed
                         if let item = item {
                             onClose(item)
                         }

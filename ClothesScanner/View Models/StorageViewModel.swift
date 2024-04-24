@@ -42,7 +42,6 @@ class StorageViewModel: ObservableObject {
         save()
     }
     
-    //** make sure to test this
     func deleteClothingItem(item: ClothingItem) {
         let fetchRequest = NSFetchRequest<ClothingItem>(entityName: "ClothingItem")
         if let itemId = item.id {

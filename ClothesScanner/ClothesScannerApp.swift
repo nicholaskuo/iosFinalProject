@@ -13,8 +13,9 @@ struct ClothesScannerApp: App {
     
     var body: some Scene {
         WindowGroup {
-           ContentView()
-            //ClosetView()
+           //ScannerView()
+           // ClosetView()
+            ContentView()
                 .environment(\.managedObjectContext,
                 persistenceController.persistentContainer.viewContext)
         }

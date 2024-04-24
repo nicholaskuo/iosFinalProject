@@ -52,7 +52,9 @@ struct ClothingMetadataView: View {
                     }
                 }
                 
-                NavigationLink(destination: ClosetView().navigationBarHidden(true), isActive: $isActive) { EmptyView() }
+               // NavigationLink(destination: ClosetView().navigationBarHidden(true), isActive: $isActive) { EmptyView() }
+                NavigationLink(destination: ScannerView().navigationBarHidden(true), isActive: $isActive) { EmptyView() }
+
                 Button(action: {
                     StorageViewModel.shared.createClothingItem(image: uiImage, name: clothingName, color: color, type: selectedType, price: price)
                     isActive = true

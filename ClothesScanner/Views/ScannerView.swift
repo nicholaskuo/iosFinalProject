@@ -63,8 +63,6 @@ struct ScannerView: View {
                         NavigationLink(destination: ClothingMetadataView(uiImage: image).navigationBarHidden(true), isActive: $isActive) { EmptyView() }
                         
                         Button(action: {
-                            // TODO: Add Navigation to view where user fills in metadata and saves image (maybe pass the image as a binding into this view)
-                            print("NICK KUO")
                             isActive = true
                         }) {
                             Text("Save Clothing")

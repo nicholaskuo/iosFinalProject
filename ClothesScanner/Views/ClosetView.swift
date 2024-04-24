@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// this view is the main closet view that displays all the items that the user has added to their closet via the scanner screen
+
 struct ClosetView: View {
     @FetchRequest(sortDescriptors: []) var clothingItems: FetchedResults<ClothingItem>
     @State var selectedType = "T-Shirt"

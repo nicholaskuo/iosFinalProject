@@ -11,16 +11,16 @@ struct HeaderView: View {
     var body: some View {
         GeometryReader { geometry in
                     ZStack {
-                        Color.purple // Background color
-                            .frame(height: 80 + geometry.safeAreaInsets.top) // Adjust height to include safe area
+                        Color.purple
+                            .frame(height: 80 + geometry.safeAreaInsets.top)
                         
-                        Text("MyStyle") // App Name
+                        Text("MyStyle")
                             .font(.largeTitle)
                             .fontWeight(.bold)
-                            .foregroundColor(.white) // Text color
+                            .foregroundColor(.white)
                             .padding()
                     }
-                    .edgesIgnoringSafeArea(.top) // Ignore safe area insets
+                    .edgesIgnoringSafeArea(.top) 
                 }
     }
 }

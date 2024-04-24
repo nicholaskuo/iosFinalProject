@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//this view sets up the info screen to tell users how to use our app
+
 struct InfoView: View {
     var body: some View {
         VStack{

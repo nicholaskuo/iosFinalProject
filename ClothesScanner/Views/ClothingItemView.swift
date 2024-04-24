@@ -7,12 +7,15 @@
 
 import SwiftUI
 
+//this is the view that appears when a user clicks into an individual item from the closet screen
+
 struct ClothingItemView: View {
     @State var item: ClothingItem?
-    @State var onClose: (ClothingItem) -> Void // Closure to inform when the view is dismissed
+    // added to fix but with deleting inside the popup
+    @State var onClose: (ClothingItem) -> Void
     
     var body: some View {
-        VStack(spacing: 25) {//test these new changes
+        VStack(spacing: 25) {
             if let item = item, let image = item.image {
                 Image(uiImage: UIImage(data: image)!)
                     .resizable()
@@ -54,7 +57,3 @@ struct ClothingItemView: View {
                     }
     }
 }
-
-//#Preview {
-//    ClothingItemView()
-//}

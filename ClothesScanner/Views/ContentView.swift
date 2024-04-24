@@ -9,6 +9,8 @@ import SwiftUI
 import UIKit
 import Vision
 
+// this view manages the three different screens via a TabView
+
 struct ContentView: View {
     @State private var image: UIImage?
     @State private var showCamera = false

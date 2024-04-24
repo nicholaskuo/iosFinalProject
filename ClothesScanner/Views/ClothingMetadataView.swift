@@ -10,6 +10,8 @@ import SwiftUI
 
 import UIKit
 
+//this view is used when the user is adding a new item to the closet
+
 struct ClothingMetadataView: View {
     @State private var selectedType = "Tops"
     @State private var price = ""
@@ -52,7 +54,6 @@ struct ClothingMetadataView: View {
                     }
                 }
                 
-               // NavigationLink(destination: ClosetView().navigationBarHidden(true), isActive: $isActive) { EmptyView() }
                 NavigationLink(destination: ScannerView().navigationBarHidden(true), isActive: $isActive) { EmptyView() }
 
                 Button(action: {

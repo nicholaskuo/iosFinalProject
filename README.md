@@ -1,5 +1,5 @@
 # iosFinalProject
-Welcome to MyStle, your very own virtual closet! 
+Welcome to MyStyle, your very own virtual closet! 
 
 Course Concept 1 (Persistent Data Storage):
 - We use CoreData to keep track of different clothing items. Each ClothingItem entity contains the following attributes: image, type, color, and price. We interact with CoreData by adding, deleting, and fetching existing entries.

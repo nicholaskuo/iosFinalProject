@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// this view is the main closet view that displays all the items that the user has added to their closet via the scanner screen
+
 struct ClosetView: View {
     @FetchRequest(sortDescriptors: []) var clothingItems: FetchedResults<ClothingItem>
     @State var selectedType = "T-Shirt"
@@ -34,8 +36,14 @@ struct ClosetView: View {
                                         }) {
                                             Image(uiImage: uiImage)
                                                 .resizable()
-                                                .aspectRatio(contentMode: .fit)
+                                                .scaledToFit()
                                                 .frame(width: 200, height: 200)
+                                                .cornerRadius(20)
+                                                .overlay(
+                                                    RoundedRectangle(cornerRadius: 20)
+                                                        .stroke(style: StrokeStyle(lineWidth: 2, dash: [10]))
+                                                        .foregroundColor(.purple)
+                                                )
                                             }
                                         } else {
                                             Text("No image found")
@@ -49,7 +57,13 @@ struct ClosetView: View {
                 }
             }
             .sheet(item: $selectedItem) { item in
-                ClothingItemView(item: item)
+                ClothingItemView(item: item, onClose: { deletedItem in
+                    // Check if the deleted item is the same as the currently selected item
+                    if deletedItem == selectedItem {
+                        // Reset the selected item
+                        selectedItem = nil
+                    }
+                })
             }
         }
     }
